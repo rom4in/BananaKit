@@ -39,8 +39,8 @@ public struct BananaView : UIViewControllerRepresentable {
 		public func numberOfPreviewItems(in controller: QLPreviewController) -> Int { return 1 }
 		
 		public func previewController(_ controller: QLPreviewController, previewItemAt index: Int) -> QLPreviewItem {
-			//let bananaUrl = Bundle(identifier: "BananaKit")
-			let url = Bundle.main.url(forResource: "banana", withExtension: "usdz")!
+			let bananaKitBundle = Bundle(identifier: "BananaKit")!
+			let url = bananaKitBundle.url(forResource: "banana", withExtension: "usdz")!
 			let item = ARQuickLookPreviewItem(fileAt: url)
 			return item
 			
