@@ -4,6 +4,10 @@
 
 Bananas, delivered. 
 
+
+BananaKit is the simplest way to deliver (AR) bananas into your iOS apps.
+
+
 ![BananaKit](https://user-images.githubusercontent.com/19999134/78049044-76833e00-7372-11ea-9424-8527683da286.gif)
 
 
