@@ -40,8 +40,8 @@ public struct BananaView : UIViewControllerRepresentable {
 		
 		public func previewController(_ controller: QLPreviewController, previewItemAt index: Int) -> QLPreviewItem {
 
-			let url = URL(string: "https://github.com/rom4in/BananaKit/blob/master/banana.usdz")!
-			let item = ARQuickLookPreviewItem(fileAt: url)
+			let banana = URL(fileURLWithPath: "https://github.com/rom4in/BananaKit/blob/master/banana.usdz")
+			let item = ARQuickLookPreviewItem(fileAt: banana)
 			return item
 		}
 	}
