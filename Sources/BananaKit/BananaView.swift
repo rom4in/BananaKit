@@ -22,6 +22,7 @@ public struct BananaView : UIViewControllerRepresentable {
 		controller.delegate = context.coordinator
 		return controller
 	}
+	
 	public func updateUIViewController(_ uiViewController: QLPreviewController, context: UIViewControllerRepresentableContext<BananaView>) {
 	}
 	
@@ -39,13 +40,14 @@ public struct BananaView : UIViewControllerRepresentable {
 		public func numberOfPreviewItems(in controller: QLPreviewController) -> Int { return 1 }
 		
 		public func previewController(_ controller: QLPreviewController, previewItemAt index: Int) -> QLPreviewItem {
-
-			let path = "https://firebasestorage.googleapis.com/v0/b/motiv8-6ba4b.appspot.com/o/banana.usdz?alt=media&token=5f21dd19-8000-4e9b-ac88-1323f8ada16c"
-			
-			let banana = URL(fileURLWithPath: path)
-			
+						
+			let banana = Bundle.main.url(forResource: "banana", withExtension: "usdz")!
 			let item = ARQuickLookPreviewItem(fileAt: banana)
 			return item
 		}
+	}
+	func getDocumentsDirectory() -> URL {
+		let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+		return paths[0]
 	}
 }
