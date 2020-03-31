@@ -14,6 +14,8 @@ import ARKit
 
 public struct BananaView : UIViewControllerRepresentable {
 	
+	public init() {}
+	
 	public func makeUIViewController(context: UIViewControllerRepresentableContext<BananaView>) -> QLPreviewController {
 		let controller =  QLPreviewController()
 		controller.dataSource = context.coordinator
