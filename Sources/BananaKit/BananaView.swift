@@ -29,7 +29,7 @@ public struct BananaView : UIViewControllerRepresentable {
 	
 	public class Coordinator: NSObject,  QLPreviewControllerDelegate, QLPreviewControllerDataSource {
 		
-		let arView : BananaView
+		public let arView : BananaView
 		public init(_ arView : BananaView) {
 			self.arView = arView
 		}
